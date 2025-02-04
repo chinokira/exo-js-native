@@ -23,9 +23,11 @@ ex: la pomme est rouge et la banane est jaune
 }
 
  */
-
-const countWords = (sentence) => {
-};
+const countWords = sentence => 
+  sentence.split(' ').reduce((acc, word) => {
+      acc[word] = (acc[word] || 0) + 1;
+      return acc;
+  }, {});
 console.log(countWords("la pomme est rouge et la banane est jaune"));
 
 /**
@@ -50,8 +52,37 @@ exemple:
 }
 
 */
+const sortObjectByValue = obj =>
+  Object.fromEntries(
+      Object.entries(obj).sort(([, a], [, b]) => a - b)
+  );
 
-const sortObjectByValue = (obj) => {
+module.exports = {
+  ternaire,
+  ternaryChain,
+  arrow1,
+  arrow2,
+  multiplyByTwo,
+  filterNameStartByA,
+  sum,
+  findUserById,
+  concat,
+  push,
+  merge,
+  setName,
+  extractFirstTwo,
+  extractRest,
+  extractName,
+  removePassword,
+  getGroupName,
+  concatStrings,
+  sleep,
+  usingThen,
+  usingAwait,
+  apiResponse,
+  parallel,
+  countWords,
+  sortObjectByValue
 };
 
 module.exports = {countWords, sortObjectByValue};
