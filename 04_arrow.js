@@ -20,6 +20,4 @@ let arrow1 = (x) => { return x + 1; }
 
 let arrow2 = x => x + 1;
 
-console.log({arrow1, arrow2});
-
 module.exports = {arrow1, arrow2};
